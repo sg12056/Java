@@ -61,5 +61,12 @@ public class PaymentController {
 		}
 		return response;
 	}
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public BaseResponse welcome( ) {
+		System.out.println("PaymentController");
+		BaseResponse response = new BaseResponse();
+		response.setMessage("Spring Frame Works!!");
+		return response;
+	}
 
 }

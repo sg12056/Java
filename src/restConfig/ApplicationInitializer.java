@@ -19,7 +19,7 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
     @Override
     protected String[] getServletMappings() {
     	System.out.println("getServletMappings");
-        return new String[] { "/rest/*" };
+        return new String[] { "/*" };
     }
  
 }

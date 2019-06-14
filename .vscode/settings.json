@@ -1,0 +1,8 @@
+{
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "MAVEN_OPTS",               // variable name
+            "value": "-Xms1024m -Xmx4096m"                     // value
+        }
+    ]
+}
