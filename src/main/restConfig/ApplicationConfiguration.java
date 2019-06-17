@@ -1,10 +1,20 @@
-package restConfig;
+package main.restConfig;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Properties;
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.Ordered;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -31,29 +41,41 @@ import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({ "restController", "securityConfig"})
+@ComponentScan({ "main/restController", "main/securityConfig"})
+//@PropertySource("WEB-INF/messages.properties")
 public class ApplicationConfiguration implements WebMvcConfigurer {
+	
+	
 	ApplicationConfiguration() {
-		System.out.println("ApplicationConfiguration");
+		
+		ResourceBundle rb = ResourceBundle.getBundle("messages");
+		String propertyValue = rb.getString("lbl.page");
+		System.out.println(propertyValue);
 	}
 
 	@Bean
 	public ViewResolver internalResourceViewResolver() {
     InternalResourceViewResolver bean = new InternalResourceViewResolver();
-    bean.setViewClass(JstlView.class);
+	//bean.setViewClass(JstlView.class);
 	bean.setPrefix("WEB-INF/views/");
-	// bean.setPrefix("WEB-INF/views/resources/**");
-	// bean.setPrefix("WEB-INF/views/resources/");
-    bean.setSuffix(".html");
+	bean.setSuffix(".jsp");
     return bean;
 	}
-
+	
+	// @Bean
+	// public ResourceBundleViewResolver rb(){
+	// 	ResourceBundleViewResolver rb = new ResourceBundleViewResolver();
+	// 	rb.setBasenames("messages");
+	// 	return rb;
+	// }
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/login").setViewName("login");
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 	}
+
+	
 
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
@@ -121,7 +143,6 @@ public class ApplicationConfiguration implements WebMvcConfigurer {
 	}
 
 	
-
 	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {
 

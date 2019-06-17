@@ -1,4 +1,4 @@
-package restResources;
+package main.restResources;
 
 public class PaymentRequest {
 	 

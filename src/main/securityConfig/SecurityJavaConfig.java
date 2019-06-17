@@ -1,4 +1,4 @@
-package securityConfig;
+package main.securityConfig;
 
 //@EnableWebSecurity
 //@Configuration

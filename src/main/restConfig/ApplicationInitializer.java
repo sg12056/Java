@@ -1,4 +1,4 @@
-package restConfig;
+package main.restConfig;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -19,7 +19,7 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
     @Override
     protected String[] getServletMappings() {
     	System.out.println("getServletMappings");
-        return new String[] { "/*" };
+        return new String[] { "/" };
     }
  
 }
