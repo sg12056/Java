@@ -8,7 +8,6 @@
   String name="lbl.page";
   String surname = ""; %>
  
- <%=surname%>  
 <html>
 <head>
     <title>Add Employee Form</title>
