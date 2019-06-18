@@ -27,10 +27,10 @@
 		</plugins>
 	</build>
 	<properties>
-		<springframework.version>4.3.12.RELEASE</springframework.version>
-		<springjdbc.version>4.3.12.RELEASE</springjdbc.version>
-		<springsecurity.version>4.2.0.RELEASE</springsecurity.version>
-		<jackson.library>2.7.5</jackson.library>
+		<springframework.version>4.3.18.RELEASE</springframework.version>
+		<springjdbc.version>4.3.18.RELEASE</springjdbc.version>
+		<springsecurity.version>4.2.7.RELEASE</springsecurity.version>
+		<jackson.library>2.9.9</jackson.library>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
