@@ -1,5 +1,6 @@
 package main.restController;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import main.restResources.BaseResponse;
 
 @RestController
+@Service("payService")
 public class PaymentController {
 
 	@RequestMapping(value = "/pay", method = RequestMethod.GET)

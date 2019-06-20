@@ -1,6 +1,7 @@
 package main.restController;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,6 +15,7 @@ import main.restResources.EmployeeVO;
 @Controller
 @RequestMapping("/")
 @SessionAttributes("employee")
+@Service("empService")
 public class EmployeeController
 {
     // @Autowired
