@@ -4,5 +4,7 @@
             "environmentVariable": "MAVEN_OPTS",               // variable name
             "value": "-Xms1024m -Xmx4096m"                     // value
         }
-    ]
+    ],
+    "maven.view": "flat",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

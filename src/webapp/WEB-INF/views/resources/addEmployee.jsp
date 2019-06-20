@@ -18,6 +18,14 @@
     <br/>
     <form:form method="post" modelAttribute="employee">
         <table>
+                <tr>
+                    <td>
+                        <spring:message code="lbl.firstName" text="Person Id" />
+                    </td>
+                    <td>
+                        <form:input path="personId" />
+                    </td>
+                </tr>
             <tr>
                 <td><spring:message code="lbl.firstName" text="First Name" /></td>
                 <td><form:input path="firstName" /></td>
@@ -27,8 +35,8 @@
                 <td><form:input path="lastName" /></td>
             </tr>
             <tr>
-                <td><spring:message code="lbl.email" text="Email Id" /></td>
-                <td><form:input path="email" /></td>
+                <td><spring:message code="lbl.email" text="Age" /></td>
+                <td><form:input path="age" type = "int"/></td>
             </tr>
             <tr>
                 <td colspan="2"><input type="submit" value="Add Employee"/></td>
