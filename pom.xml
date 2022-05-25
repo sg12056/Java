@@ -27,7 +27,7 @@
 		</plugins>
 	</build>
 	<properties>
-		<springframework.version>4.3.18.RELEASE</springframework.version>
+		<springframework.version>5.2.22.RELEASE</springframework.version>
 		<springjdbc.version>4.3.18.RELEASE</springjdbc.version>
 		<springsecurity.version>4.2.7.RELEASE</springsecurity.version>
 		<jackson.library>2.9.9</jackson.library>
